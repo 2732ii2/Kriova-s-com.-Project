@@ -4,8 +4,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@200&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            transition: all .5s;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+            background:linear-gradient(orange,white);
+        }
+        h1{
+            text-align: left;
+            padding:5px;
+            Color:red;
+            font-size: 52px;
+            
+            text-shadow: 2px 2px 4px black;
+            letter-spacing: 1px;
+            padding-left: 10px;
+            font-family: 'Taviraj', serif;
+            
+        }
+        .con{
+            width:500px;
+            height:500px;
+            border-radius: 20px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:transparent;
+            transition: all .5s;
+            border: 4px solid white;
+            box-shadow: 0 21px 52px -5px black;
+        }
+        .con:hover{
+            transform: scale(1.05);
+        }
+        .sinup{
+            width:100%;
+            height: 100%;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-size: 28px;
+            overflow: hidden;
+            flex-direction: column;
+            background:transparent;
+            transition:  all 2s;
+        }
+        input{
+            width:200px;
+            height: 40px;
+            border-radius: 10px;
+            background: transparent;
+            margin-left: 10px;
+            outline: none;
+            font-size: 24px;
+            color:white;
+            box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+            text-align: center;
+        }
+        .btns_{
+            padding: 20px;
+            display: flex;
+            font-size: 32px;
+            color:white;
+            cursor: pointer;
+            border-bottom: 2px solid white;
+            justify-content: space-between;
+        }
+        #sb{
+            margin-left: 20%;
+            background: transparent;
+            height: 40px;
+            text-align: center;
+
+            outline:none;
+            width: 250px;
+            font-size: 32px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+        #same{
+            width:200px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            box-shadow: 2px 2px 4px black;
+            height: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+            border-radius: 5px;
+            background: transparent;
+        }
+        span{
+            color:white;
+            text-shadow: 2px 2px 4px black;
+        }
+        #en{
+            background: transparent;
+            box-shadow: 2px 2px 4px black;
+            width: 200px;
+            height: 40px;
+            font-size: 32px;
+            color:white;
+            text-shadow:2px 2px 4px rgba(0,0,0,.5) ;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .one{
+            transition: all .5s;
+            box-shadow: 2px 2px 4px black;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: -20px;
+        }
+        a{
+            color:blue;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+        }
+        .two{
+             transition: all .5s;
+            margin-left: 120%;
+            margin-top: -85%;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 2px 2px 4px black;
+            color:white;
+        }
+        
+        #ema{
+            width: 400px;
+            margin-top: 5px;
+        }
+         #ema1{
+            width: 400px;
+            margin-top: 5px;
+        }
+
+    </style>
 </head>
-<body>
-    <h1></h1>
+<body onloadeddata="clearData()" >
+    <h1>K<span>riova</span></h1>
+    <div class="con">
+        <div class="sinup">
+            <div class="btns_">
+                <button class="log2" id="same">Sign Up</button> | <button class="log" id="same">Login</button> 
+            </div><br>
+            <div class="_1">
+                <div class="one">
+             Name :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="n" type="text"><br><br>
+            Email        : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="e" type="email"><br><br>
+            Password     :&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="p" type="text"><br><br>
+            Confirm Pass :&nbsp; <input id="cp" type="text"> <br><br>
+            <button  id="sb">Submit</button><br><br>
+            </div>
+            <div class="two">
+                Name<input  id="ema0" type="text">
+                <br><br>
+                Email<input  id="ema" type="Email">
+                <br><br>
+                Password<input  id="ema1" type="password">
+                <br> <br>
+                <button id="en">Enter</button>
+                <br>
+               <br>
+                <a href="./sec.html" target="blank">forget Password</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.log').addEventListener("click",function()
+        {
+           document.querySelector('.one').style.marginLeft="-120%";
+            document.querySelector('.two').style.boxShadow="2px 2px 4px black";
+           document.querySelector('.two').style.marginLeft="-0%";
+           document.querySelector('.two').style.marginRight="0";
+            document.querySelector('.one').style.boxShadow="none";
+        })
+        document.querySelector('#sb').addEventListener("click",function()
+        {
+             document.querySelector('.one').style.boxShadow="2px 2px 4px lightgreen";   
+              document.querySelector('.one').style.border="2px solid lightgreen";
+           setTimeout(function()
+           {
+             document.querySelector('.one').style.boxShadow="none";   
+             document.querySelector('.one').style.border="none";   
+            document.querySelector('.one').style.marginLeft="-120%";
+            document.querySelector('.two').style.boxShadow="2px 2px 4px black";
+           document.querySelector('.two').style.marginLeft="-0%";
+           document.querySelector('.two').style.marginRight="0";
+            document.querySelector('.one').style.boxShadow="none";
+           },1000);
+        })
+        document.querySelector('.log2').addEventListener("click",function()
+        {
+            document.querySelector('.one').style.border="none";
+            document.querySelector('.one').style.borderShadow="none";
+            document.querySelector('.two').style.boxShadow="none";
+            document.querySelector('.one').style.marginLeft="0%";
+            document.querySelector('.one').style.boxShadow="none";
+            document.querySelector('.one').style.boxShadow="2px 2px 4px black";
+            document.querySelector('.two').style.marginRight="-220%";
+        })
+    </script>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./firebs.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
 </body>
 </html>
