@@ -168,19 +168,30 @@
             align-items: center;
             font-size: 44px;
             border-radius: 50%;
+             cursor: pointer;
             background-color: white;
         }
         .note{
             position: fixed;
             width:200px;
             height: 10px;
-            border: 1px solid black;
+            padding: 5px;
+            border: 3px solid white;
+            border-radius: 10px;
             margin-right: 5px;
             margin-left: 84%;
             display: none;
             transition: all .5s;
             cursor: pointer;
-            margin-top: 35%;
+            color:white;
+            text-transform: capitalize;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+            list-style: none;
+            box-shadow: 0 21px 42px -10px black;
+            margin-top: 25%;
             background: transparent;
         }
     </style>
@@ -191,7 +202,14 @@
     <div onmouseenter="notepoints()" onmouseout="sm()" class="cir">
         i
     </div>
-    <div class="note"></div>
+    <div class="note">
+        <ul>
+            <li>1. If your password is not matched with confirm password it will gave an error</li>
+            <li>2. If your account is created then you can directly go to login page y just clicking it</li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
     </div>
     <div class="con">
         <div class="sinup">
@@ -258,7 +276,7 @@
         function notepoints()
         {
             document.querySelector('.note').style.display="block";
-            document.querySelector('.note').style.height="400px";
+            document.querySelector('.note').style.height="200px";
         }
         function sm()
         {
