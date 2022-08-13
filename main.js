@@ -21,18 +21,24 @@ function readData() {
 document.getElementById("sb").addEventListener("click", function () {
   readData();
   // from here the main work is started
-  set(ref(getDatabase(), "data/" + namev), {
-    Name: namev,
-    Email: emailv,
-    Password: password,
-    Confirm_password: conf_pass,
-  })
-    .then(() => {
-      alert("Account is created successfully");
+  if(password==conf_pass)
+  {
+    set(ref(getDatabase(), "data/" + namev), {
+      Name: namev,
+      Email: emailv,
+      Password: password,
+      Confirm_password: conf_pass,
     })
-    .catch((error) => {
-      alert("unsuccestful", error);
-    });
+      .then(() => {
+        alert("Account is created successfully");
+      })
+      .catch((error) => {
+        alert("unsuccestful", error);
+      });
+  }
+  else{
+    alert("account is not created cause of confirm password");
+  }
 
   //clearing the data
   clearData();
