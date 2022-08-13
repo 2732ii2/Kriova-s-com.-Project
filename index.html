@@ -170,14 +170,28 @@
             border-radius: 50%;
             background-color: white;
         }
+        .note{
+            position: fixed;
+            width:200px;
+            height: 10px;
+            border: 1px solid black;
+            margin-right: 5px;
+            margin-left: 84%;
+            display: none;
+            transition: all .5s;
+            cursor: pointer;
+            margin-top: 35%;
+            background: transparent;
+        }
     </style>
 </head>
 <body onloadeddata="clearData()" >
     <div class="hea">
     <h1>K<span>riova</span></h1>
-    <div class="cir">
+    <div onmouseenter="notepoints()" onmouseout="sm()" class="cir">
         i
     </div>
+    <div class="note"></div>
     </div>
     <div class="con">
         <div class="sinup">
@@ -241,6 +255,15 @@
             document.querySelector('.one').style.boxShadow="2px 2px 4px black";
             document.querySelector('.two').style.marginRight="-220%";
         })
+        function notepoints()
+        {
+            document.querySelector('.note').style.display="block";
+            document.querySelector('.note').style.height="400px";
+        }
+        function sm()
+        {
+            document.querySelector('.note').style.display="none";
+        }
     </script>
 
     <script type="module" src="./main.js"></script>
