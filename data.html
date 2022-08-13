@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:linear-gradient(pink,purple);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 110vh;
+        }
+        .con{
+            width: 1200px;
+            height: 700px;
+            display: flex;
+            margin-top: 1%;
+            justify-content: c;
+            padding: 5px;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 21px 42px -10px black;
+            border: 1px solid white;
+            background-color: rgb(244, 236, 236,.4);
+        }
+        table{
+            width:90%;
+            height: 70%;
+            margin-top: 3%;
+            background: transparent;
+            font-size: 22px;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+        #mytable{
+            box-shadow: 4px 4px 18px black;
+            
+        }
+        h1{
+            margin-top: -6%;
+
+            color: white;
+        }
+        #_1{
+            color: black;
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee database</h1>
+     <div id="content" class="con">
+        <h2>Data Added Dyanmically</h2>
+        
+        <table id="mytable" border="1">
+            <tr>
+                <th id="_1" >Id</th>
+                <th id="_1" >Name</th>
+                <th id="_1">Email</th>
+                <th id="_1">Phone Number</th>
+                <th id="_1">city</th>
+                <th id="_1">Zipcode</th>
+                <th id="_1">street</th>
+                <th id="_1">Website</th>
+            </tr>
+        </table>
+    </div>
+    <script src="fetch_data.js"> </script>
+</body>
+</html>
